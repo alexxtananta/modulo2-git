@@ -114,3 +114,36 @@ print(f"Tag 'V1.0': {verificar_tag_valida('V1.0')}\n")       # Esperado: False (
 
 print("===================================================================================================")
 print("\n")
+
+print("5º DESAFIO CONCLUÍDO")
+print("\n")
+
+def gerar_relatorio_final(funcoes_concluidas):
+    """
+    Recebe uma lista com os nomes das funções implementadas
+    e retorna uma mensagem final do desafio.
+
+    Exemplo:
+    gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"])
+    ->
+    "Desafio concluído! 2 funções implementadas com sucesso."
+    """
+
+    quantidade = len(funcoes_concluidas)
+    
+    mensagem_final = f"Desafio concluído! {quantidade} funções implementadas com sucesso."
+    
+    return mensagem_final
+
+
+funcoes_exemplo_1 = ["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]
+relatorio_1 = gerar_relatorio_final(funcoes_exemplo_1)
+print(f"Relatório 1 (2 funções): {relatorio_1}\n")
+
+
+funcoes_exemplo_2 = ["funcao_a", "funcao_b", "funcao_c", "funcao_d"]
+relatorio_2 = gerar_relatorio_final(funcoes_exemplo_2)
+print(f"Relatório 2 (4 funções): {relatorio_2}\n")
+
+print("===================================================================================================")
+print("\n")
