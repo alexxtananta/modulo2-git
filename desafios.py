@@ -13,24 +13,29 @@ Seu objetivo é:
 Boa sorte e bons commits! 🚀
 """
 
-import re
+def gerar_relatorio_final(funcoes_concluidas):
+    """
+    Recebe uma lista com os nomes das funções implementadas
+    e retorna uma mensagem final do desafio.
 
-def verificar_tag_valida(tag):
+    Exemplo:
+    gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"])
+    ->
+    "Desafio concluído! 2 funções implementadas com sucesso."
     """
-    Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
-    Retorna True se o formato for válido, caso contrário False.
-    """
-    padrao = r'^v\d+\.\d+$'
+
+    quantidade = len(funcoes_concluidas)
     
-    return re.match(padrao, tag) is not None
+    mensagem_final = f"Desafio concluído! {quantidade} funções implementadas com sucesso."
+    
+    return mensagem_final
 
-print("Verificação de Tags Válidas:")
-print(f"Tag 'v1.0': {verificar_tag_valida('v1.0')}")       # Esperado: True
-print(f"Tag 'v2.15': {verificar_tag_valida('v2.15')}")     # Esperado: True
-print(f"Tag 'v0.5': {verificar_tag_valida('v0.5')}")       # Esperado: True
 
-print("\nVerificação de Tags Inválidas:")
-print(f"Tag '1.0': {verificar_tag_valida('1.0')}")         # Esperado: False (falta o 'v')
-print(f"Tag 'v1': {verificar_tag_valida('v1')}")           # Esperado: False (falta o '.Y')
-print(f"Tag 'v1.0.1': {verificar_tag_valida('v1.0.1')}")   # Esperado: False (formato extra)
-print(f"Tag 'V1.0': {verificar_tag_valida('V1.0')}")       # Esperado: False (letra maiúscula)
+funcoes_exemplo_1 = ["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]
+relatorio_1 = gerar_relatorio_final(funcoes_exemplo_1)
+print(f"Relatório 1 (2 funções): {relatorio_1}")
+
+
+funcoes_exemplo_2 = ["funcao_a", "funcao_b", "funcao_c", "funcao_d"]
+relatorio_2 = gerar_relatorio_final(funcoes_exemplo_2)
+print(f"Relatório 2 (4 funções): {relatorio_2}")
