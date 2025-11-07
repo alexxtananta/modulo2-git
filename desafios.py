@@ -13,29 +13,15 @@ Seu objetivo é:
 Boa sorte e bons commits! 🚀
 """
 
-def gerar_relatorio_final(funcoes_concluidas):
+def mostrar_mensagem_inicial():
     """
-    Recebe uma lista com os nomes das funções implementadas
-    e retorna uma mensagem final do desafio.
-
-    Exemplo:
-    gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"])
-    ->
-    "Desafio concluído! 2 funções implementadas com sucesso."
+    Exibe uma mensagem de boas-vindas ao desafio.
+    Retorno esperado: string com a mensagem "Bem-vindo ao Desafio de Git!"
     """
+    mensagem = "Bem-vindo ao Desafio de Git!"
+    print(mensagem) 
+    return mensagem
 
-    quantidade = len(funcoes_concluidas)
-    
-    mensagem_final = f"Desafio concluído! {quantidade} funções implementadas com sucesso."
-    
-    return mensagem_final
+mensagem_de_retorno = mostrar_mensagem_inicial()
 
-
-funcoes_exemplo_1 = ["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]
-relatorio_1 = gerar_relatorio_final(funcoes_exemplo_1)
-print(f"Relatório 1 (2 funções): {relatorio_1}")
-
-
-funcoes_exemplo_2 = ["funcao_a", "funcao_b", "funcao_c", "funcao_d"]
-relatorio_2 = gerar_relatorio_final(funcoes_exemplo_2)
-print(f"Relatório 2 (4 funções): {relatorio_2}")
+print(f"\nO valor retornado é: {mensagem_de_retorno}") 
