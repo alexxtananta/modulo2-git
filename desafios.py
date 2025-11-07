@@ -13,27 +13,20 @@ Seu objetivo é:
 Boa sorte e bons commits! 🚀
 """
 
-def listar_comandos_git_basicos():
+def criar_mensagem_commit(funcao_nome):
     """
-    Retorna uma lista com os principais comandos básicos do Git.
-    Exemplo de saída:
-    ["git init", "git add", "git commit", "git status", "git push"]
+    Recebe o nome de uma função e retorna uma mensagem de commit padronizada.
+    Exemplo:
+    criar_mensagem_commit("listar_comandos_git_basicos") ->
+    "Implementa função listar_comandos_git_basicos"
     """
     
-    comandos_basicos = [
-        "git init - inicia o git",    
-        "git add - prepara o arquivo para fazer o commiit (stage area)",   
-        "git commit - faz o commit", 
-        "git status - lista o status se tem algum arquivo para adicionar ou fazer commit",  
-        "git push - envia o repositório para o git hub",    
-        "git pull - puxa o diretório",    
-    ]
+    mensagem_commit = f"Implementa função {funcao_nome}"
     
-    return comandos_basicos
+    return mensagem_commit
 
-# Exemplo de uso da função:
-lista_de_comandos = listar_comandos_git_basicos()
-print("Comandos Básicos do Git:")
-for comando in lista_de_comandos:
-    print(f"- {comando}")
+mensagem_1 = criar_mensagem_commit("listar_comandos_git_basicos")
+print(f'Função "listar_comandos_git_basicos" -> Commit: "{mensagem_1}"')
 
+mensagem_2 = criar_mensagem_commit("mostrar_mensagem_inicial")
+print(f'Função "mostrar_mensagem_inicial" -> Commit: "{mensagem_2}"')
