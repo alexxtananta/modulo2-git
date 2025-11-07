@@ -30,7 +30,7 @@ mensagem_de_retorno = mostrar_mensagem_inicial()
 
 print(f"\nO valor retornado é: {mensagem_de_retorno}\n") 
 
-print("==================================================================================")
+print("=================================================================================================")
 print("\n")
 
 print("2º DESAFIO CONCLUÍDO")
@@ -60,8 +60,31 @@ print("Comandos Básicos do Git:")
 for comando in lista_de_comandos:
     print(f"- {comando}\n")
 
-print("==================================================================================")
+print("=================================================================================================")
 print("\n")
 
+print("3º DESAFIO CONCLUÍDO")
+print("\n")
+
+def criar_mensagem_commit(funcao_nome):
+    """
+    Recebe o nome de uma função e retorna uma mensagem de commit padronizada.
+    Exemplo:
+    criar_mensagem_commit("listar_comandos_git_basicos") ->
+    "Implementa função listar_comandos_git_basicos"
+    """
+    
+    mensagem_commit = f"Implementa função {funcao_nome}"
+    
+    return mensagem_commit
+
+mensagem_1 = criar_mensagem_commit("listar_comandos_git_basicos")
+print(f'Função "listar_comandos_git_basicos" -> Commit: "{mensagem_1}\n"')
+
+mensagem_2 = criar_mensagem_commit("mostrar_mensagem_inicial")
+print(f'Função "mostrar_mensagem_inicial" -> Commit: "{mensagem_2}\n"')
+
+print("===================================================================================================")
+print("\n")
 
 
